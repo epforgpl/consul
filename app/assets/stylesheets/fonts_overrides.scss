@@ -1,0 +1,67 @@
+// Fonts
+//
+// 01. Source Sans Pro (https://www.google.com/fonts/specimen/Source+Sans+Pro)
+// 02. Lato (https://www.google.com/fonts/specimen/Lato)
+//
+
+// 01. Source Sans Pro
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: font-url("Source_Sans_Pro/SourceSansPro-Light.ttf");
+  src: font-url("Source_Sans_Pro/SourceSansPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: font-url("Source_Sans_Pro/SourceSansPro-Regular.ttf");
+  src: font-url("Source_Sans_Pro/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 400;
+  src: font-url("Source_Sans_Pro/SourceSansPro-Italic.ttf");
+  src: font-url("Source_Sans_Pro/SourceSansPro-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: font-url("Source_Sans_Pro/SourceSansPro-Bold.ttf");
+  src: font-url("Source_Sans_Pro/SourceSansPro-Bold.ttf") format("truetype");
+}
+
+// 02. Lato
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@font-face {
+  font-family: "Lato";
+  src: font-url("Lato2OFL/Lato-Light.ttf");
+  src: font-url("Lato2OFL/Lato-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: font-url("Lato2OFL/Lato-Regular.ttf");
+  src: font-url("Lato2OFL/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: font-url("Lato2OFL/Lato-Bold.ttf");
+  src: font-url("Lato2OFL/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
