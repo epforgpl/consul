@@ -112,6 +112,12 @@
 
         <%= render 'communities/access_button', community: @proposal.community %>
 
+        <% if feature?(:map) && map_location_available?(@proposal.map_location) %>
+          <div class="margin">
+            <%= render_map(@proposal.map_location, "proposal", false, nil) %>
+          </div>
+        <% end %>
+
       </aside>
     </div>
   </div>
