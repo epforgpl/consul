@@ -57,6 +57,9 @@
               <p><%= proposal.summary %></p>
               <div class="truncate"></div>
             </div>
+            <div class="float-right">
+              <%= link_to t("community.sidebar.button_to_access"), community_path(proposal.community.id), class: 'button' %>
+            </div>
             <%= render "shared/tags", taggable: proposal, limit: 5 %>
           <% end %>
         </div>
