@@ -20,6 +20,13 @@
                                 title: t("shared.go_to_page") + t("layouts.header.proposals") %>
       </li>
     <% end %>
+    <li>
+      <%= layout_menu_link_to "Narzędziownik",
+                              "/faq",
+                              current_page?("/faq"),
+                              title: "Go to page of " + "Narzędziownik",
+                              accesskey: "n" %>
+    </li>
     <% if feature?(:polls) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.poll_questions"),
