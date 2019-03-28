@@ -39,7 +39,7 @@ COPY Gemfile_custom Gemfile_custom
 RUN gem install bundler -v '~>1.17'
 
 # Finish establishing our Ruby environment
-RUN bundle install --full-index
+RUN bash -c 'if [[ "$RAILS_ENV" == "production" ]]; then bundle install --without development test; else bundle install; fi'
 
 # Install Chromium and ChromeDriver for E2E integration tests
 RUN apt-get update -qq && apt-get install -y chromium
@@ -55,5 +55,6 @@ COPY . .
 
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
-# CMD [ "config/containers/app_cmd.sh" ]
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+ENTRYPOINT [/usr/local/bin/entrypoint.sh]
+CMD [rm -f /var/www/consul/tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0]
+
