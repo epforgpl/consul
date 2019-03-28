@@ -42,11 +42,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
-
-  # Use the lowest log level to ensure availability of diagnostic information
-  # when problems arise.
-  config.log_level = :warn
+  config.force_ssl = ENV.fetch('FORCE_SSL', true) != 'false'
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
@@ -60,11 +56,14 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
 
+  # This should be handled by the proxy
+  # config.action_controller.default_url_options = { host: Rails.application.secrets.server_name, protocol: Rails.application.secrets.server_protocol }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: Rails.application.secrets.server_name }
-  config.action_mailer.asset_host = "https://#{Rails.application.secrets.server_name}"
+  config.action_mailer.default_url_options = { host: Rails.application.secrets.server_name, protocol: Rails.application.secrets.server_protocol }
+  config.action_mailer.asset_host = "#{Rails.application.secrets.server_protocol}://#{Rails.application.secrets.server_name}"
 
   # SMTP configuration to deliver emails
   # Uncomment the following block of code and add your SMTP service credentials
@@ -78,6 +77,16 @@ Rails.application.configure do
   #   authentication:       'plain',
   #   enable_starttls_auto: true }
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              ENV["SMTP_HOST"],
+    port:                 ENV["SMTP_PORT"] || 587,
+    domain:               ENV["SMTP_DOMAIN"] || Rails.application.secrets.server_name,
+    user_name:            ENV["SMTP_USER"],
+    password:             ENV["SMTP_PASSWORD"],
+    authentication:       ENV["SMTP_AUTHENTICATION"] || "plain",
+    enable_starttls_auto: ENV["SMTP_STARTTLS_AUTO"] || true }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
@@ -85,8 +94,19 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+
+  # Use the lowest log level to ensure availability of diagnostic information
+  # when problems arise.
+  config.log_level = :warn
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # We want to set up a custom logger which logs to STDOUT.
+  # Docker expects your application to log to STDOUT/STDERR and to be ran
+  # in the foreground.
+  config.log_tags  = [:subdomain, :uuid]
+  config.logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
