@@ -1,5 +1,5 @@
-# Use Ruby 2.3.6 as base image
-FROM ruby:2.3.6
+# Use Ruby 2.4.4 as base image
+FROM ruby:2.4.4
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -36,7 +36,7 @@ COPY Gemfile.lock Gemfile.lock
 COPY Gemfile_custom Gemfile_custom
 
 # Prevent bundler warnings; ensure that the bundler version executed is >= that which created Gemfile.lock
-RUN gem install bundler
+RUN gem install bundler -v '~>1.17'
 
 # Finish establishing our Ruby environment
 RUN bundle install --full-index
