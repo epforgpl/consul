@@ -10,12 +10,6 @@ RUN apt-get install -y build-essential libpq-dev postgresql-client nodejs imagem
 RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get clean -y
 
-# Files created inside the container repect the ownership
-# TODO do we want a separate non-root user? Milo has cleaned a lot of that throwing out also he entrypoint script
-RUN adduser --shell /bin/bash --disabled-password --gecos "" consul \
-  && adduser consul sudo \
-  && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-
 RUN echo 'Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bundle/bin"' > /etc/sudoers.d/secure_path
 RUN chmod 0440 /etc/sudoers.d/secure_path
 
@@ -26,7 +20,7 @@ ENV RAILS_ROOT /var/www/consul
 WORKDIR $RAILS_ROOT
 
 # Create application home. App server will need the pids dir so just create everything in one shot
-RUN mkdir -p $RAILS_ROOT/tmp/pids
+# TODO keep it? RUN mkdir -p $RAILS_ROOT/tmp/pids
 
 # Use the Gemfiles as Docker cache markers. Always bundle before copying app src.
 # (the src likely changed and we don't want to invalidate Docker's cache too early)
@@ -56,7 +50,7 @@ COPY scripts/* /usr/local/bin/
 
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT []
 CMD ["/usr/local/bin/start.sh"]
 EXPOSE 3000
 
