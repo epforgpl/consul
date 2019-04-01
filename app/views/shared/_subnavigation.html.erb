@@ -35,19 +35,19 @@
                               accesskey: "n" %>
     </li>
     <li>
-      <%= layout_menu_link_to "Przyjaciele",
+      <%= layout_menu_link_to "Mentorzy",
                               "/mentors",
                               current_page?("/mentors"),
-                              title: "Go to page of " + "Przyjaciele",
+                              title: "Go to page of " + "Narzędziownik",
                               accesskey: "n" %>
     </li>
     <li>
-      <%= layout_menu_link_to "O DziałaMy! Wawer",
+      <%= layout_menu_link_to "O projekcie",
                               "/about",
                               current_page?("/about"),
-                              title: "Go to page of " + "O DziałaMy! Wawer",
+                              title: "Go to page of " + "O projekcie",
                               accesskey: "n" %>
-</li>
+    </li>
     <% if feature?(:polls) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.poll_questions"),
