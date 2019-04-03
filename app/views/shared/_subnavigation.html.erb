@@ -48,6 +48,27 @@
                               title: "Go to page of " + "Narzędziownik",
                               accesskey: "n" %>
     </li>
+    <li>
+      <%= layout_menu_link_to "Wydarzenia",
+                              "/events",
+                              current_page?("/events"),
+                              title: "Go to page of " + "Wydarzenia",
+                              accesskey: "n" %>
+    </li>
+    <li>
+      <%= layout_menu_link_to "Przyjaciele",
+                              "/mentors",
+                              current_page?("/mentors"),
+                              title: "Go to page of " + "Przyjaciele",
+                              accesskey: "n" %>
+    </li>
+    <li>
+      <%= layout_menu_link_to "O DziałaMy! Wawer",
+                              "/about",
+                              current_page?("/about"),
+                              title: "Go to page of " + "O DziałaMy! Wawer",
+                              accesskey: "n" %>
+</li>
     <% if feature?(:polls) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.poll_questions"),
