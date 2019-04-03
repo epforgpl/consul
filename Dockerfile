@@ -48,6 +48,8 @@ COPY . .
 
 COPY scripts/* /usr/local/bin/
 
+COPY config/database.yml.example $RAILS_ROOT/config/database.yml
+
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
 ENTRYPOINT []
