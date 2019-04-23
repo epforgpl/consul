@@ -16,6 +16,28 @@ pl:
         no_polls: Nie uoficjalniasz ostatecznych rozliczeń w żadnej aktywnej ankiecie
         select_poll: Wybierz ankietę
         add_results: Dodaj wyniki
+    poll_budgets:
+      see_ballot_sheets: See ballot sheets list
+      index:
+        title: "%{poll_budget} - Ballot sheets list"
+        ballot_sheet: "Ballot sheet %{id}"
+        ballot_sheet_name: Name
+        ballot_sheet_author: Author
+        ballot_sheet_creation_date: Creation date
+        empty_results: There are no ballot sheets for this poll yet
+      new:
+        title: "%{poll_budget} - New ballot sheet"
+        booth: Booth
+        select_booth: Select booth
+        csv_data: CSV data
+        submit: Save
+      show:
+        created_at: Creation date
+        author: Author
+        data: CSV data
+    booth:
+      new:
+        title: "Choose your booth"
     results:
       flash:
         create: "Wyniki zapisane"
@@ -51,7 +73,6 @@ pl:
         submit: Uprawomocnij dokument
         error_verifying_census: "Spis powszechny nie był w stanie zweryfikować tego dokumentu."
         form_errors: uniemożliwił weryfikację tego dokumentu
-        no_assignments: "Nie masz dziś uoficjalniających zmian"
     voters:
       new:
         title: Ankiety
