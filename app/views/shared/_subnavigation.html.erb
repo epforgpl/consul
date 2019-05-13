@@ -21,6 +21,13 @@
       </li>
     <% end %>
     <li>
+      <%= layout_menu_link_to "O projekcie",
+                              "/about",
+                              current_page?("/about"),
+                              title: "Go to page of " + "O projekcie",
+                              accesskey: "n" %>
+    </li>
+    <li>
       <%= layout_menu_link_to "Narzędziownik",
                               "/faq",
                               current_page?("/faq"),
@@ -39,13 +46,6 @@
                               "/mentors",
                               current_page?("/mentors"),
                               title: "Go to page of " + "Narzędziownik",
-                              accesskey: "n" %>
-    </li>
-    <li>
-      <%= layout_menu_link_to "O projekcie",
-                              "/about",
-                              current_page?("/about"),
-                              title: "Go to page of " + "O projekcie",
                               accesskey: "n" %>
     </li>
     <% if feature?(:polls) %>
