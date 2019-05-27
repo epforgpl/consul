@@ -20,6 +20,34 @@
                                 title: t("shared.go_to_page") + t("layouts.header.proposals") %>
       </li>
     <% end %>
+    <li>
+      <%= layout_menu_link_to "Narzędziownik",
+                              "/faq",
+                              current_page?("/faq"),
+                              title: "Go to page of " + "Narzędziownik",
+                              accesskey: "n" %>
+    </li>
+    <li>
+      <%= layout_menu_link_to "Wydarzenia",
+                              "/events",
+                              current_page?("/events"),
+                              title: "Go to page of " + "Wydarzenia",
+                              accesskey: "n" %>
+    </li>
+    <li>
+      <%= layout_menu_link_to "Mentorzy",
+                              "/mentors",
+                              current_page?("/mentors"),
+                              title: "Go to page of " + "Narzędziownik",
+                              accesskey: "n" %>
+    </li>
+    <li>
+      <%= layout_menu_link_to "O projekcie",
+                              "/about",
+                              current_page?("/about"),
+                              title: "Go to page of " + "O projekcie",
+                              accesskey: "n" %>
+    </li>
     <% if feature?(:polls) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.poll_questions"),
