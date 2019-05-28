@@ -26,6 +26,11 @@ pl:
         few: "Etapy inwestycji"
         many: "Etapów inwestycji"
         other: "Etapów inwestycji"
+      progress_bar:
+        one: "Pasek postępu"
+        few: "Pasek postępu"
+        many: "Paski postępu"
+        other: "Progress bars"
       comment:
         one: "Komentarz"
         few: "Komentarze"
@@ -91,6 +96,16 @@ pl:
         few: "kabiny wyborcze"
         many: "kabin wyborczych"
         other: "kabin wyborczych"
+      poll/officer:
+        one: "urzędnik"
+        few: "urzędnik"
+        many: "urzędnicy"
+        other: "officers"
+      poll/ballot_sheet:
+        one: Ballot sheet
+        few: Ballot sheets
+        many: Ballot sheets
+        other: Ballot sheets
       proposal:
         one: "Propozycje obywatelskie"
         few: "Propozycje obywatelskie"
@@ -196,6 +211,8 @@ pl:
       geozone:
         name: Nazwa
         external_code: "Zewnętrzny kod (opcjonalnie)"
+        census_code: "Kod ze spisu (opcjonalnie)"
+        html_map_coordinates: "współrzędne (opcjonalnie) HTML <map>"
       milestone:
         status_id: "Bieżący stan inwestycji (opcjonalnie)"
         title: "Tytuł"
@@ -235,7 +252,7 @@ pl:
         username: "Nazwa użytkownika"
         password_confirmation: "Potwierdzenie hasła"
         password: "Hasło"
-        current_password: "Obecne hasło"
+        current_password: "Stare hasło"
         phone_number: "Numer telefonu"
         official_position: "Oficjalne stanowisko"
         official_level: "Oficjalny poziom"
@@ -248,7 +265,7 @@ pl:
         association_name: "Nazwa stowarzyszenia"
         description: "Opis"
         external_url: "Link do dodatkowej dokumentacji"
-        geozone_id: "Zakres operacji"
+        geozone_id: "Część dzielnicy, której dotyczy pomysł"
         title: "Tytuł"
       poll:
         name: "Nazwa"
@@ -268,6 +285,10 @@ pl:
         external_url: "Link do dodatkowej dokumentacji"
       poll/question/translation:
         title: "Pytanie"
+      poll/ballot_sheet:
+        data: CSV data
+        poll_id: Poll
+        officer_assignment_id: Officer assignment
       signature_sheet:
         signable_type: "Rodzaj podpisywalny"
         signable_id: "Podpisywalny identyfikator"
@@ -442,8 +463,8 @@ pl:
         signature:
           attributes:
             document_number:
-              not_in_census: 'Niezweryfikowane z rejestrem mieszkańców'
-              already_voted: 'Już zagłosowano na tę propozycję'
+              not_in_census: "Niezweryfikowane z rejestrem mieszkańców"
+              already_voted: "Już zagłosowano na tę propozycję"
         site_customization/page:
           attributes:
             slug:
@@ -456,7 +477,7 @@ pl:
         comment:
           attributes:
             valuation:
-              cannot_comment_valuation: 'Nie możesz komentować wyceny'
+              cannot_comment_valuation: "Nie możesz komentować wyceny"
       messages:
         record_invalid: "Sprawdzanie poprawności nie powiodło się: %{errors}"
         restrict_dependent_destroy:
