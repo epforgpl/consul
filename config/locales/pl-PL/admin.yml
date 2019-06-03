@@ -1,4 +1,4 @@
-pl:
+﻿pl:
   admin:
     header:
       title: Administracja
@@ -613,7 +613,7 @@ pl:
       emails_download: Pobieranie e-maili
       valuators: Wyceniający
       poll_officers: Urzędnicy sondujący
-      polls: Ankiety
+      polls: Sondaże
       poll_booths: Lokalizacja kabin
       poll_booth_assignments: Przeznaczenia Kabin
       poll_shifts: Zarządzaj zmianami
@@ -632,8 +632,8 @@ pl:
         information_texts_menu:
           debates: "Debaty"
           community: "Społeczność"
-          proposals: "Wnioski"
-          polls: "Ankiety"
+          proposals: "Pomysły"
+          polls: "Sondaże"
           layouts: "Układy"
           mailers: "E-maile"
           management: "Zarząd"
@@ -1124,7 +1124,7 @@ pl:
       level_5: Poziom 5
       search:
         edit_official: Edytuj urzędnika
-        make_official: Uczyń urzędowym
+        make_official: Nadaj status urzędnika
         title: "Oficjalne stanowiska: Szukaj użytkownika"
         no_results: Oficjalne stanowiska nie znalezione.
     organizations:

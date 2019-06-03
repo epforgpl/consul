@@ -1,4 +1,4 @@
-pl:
+﻿pl:
   devise_views:
     confirmations:
       new:
@@ -14,8 +14,8 @@ pl:
         title: Potwierdź moje konto
     mailer:
       confirmation_instructions:
-        confirm_link: Potwierdź moje konto
-        text: "Możesz potwierdzić Twoje konto emailowe pod następującym linkiem:"
+        confirm_link: Potwierdź konto
+        text: "Potwierdź swoje konto klikając w poniższy link:"
         title: Witaj
         welcome: Witaj
       reset_password_instructions:

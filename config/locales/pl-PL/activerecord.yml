@@ -1,4 +1,4 @@
-pl:
+﻿pl:
   activerecord:
     models:
       activity:
@@ -62,10 +62,10 @@ pl:
         many: "Administrator"
         other: "Administrator"
       valuator:
-        one: "Wyceniający"
-        few: "Wyceniający"
-        many: "Wyceniający"
-        other: "Wyceniający"
+        one: "Oceniający"
+        few: "Oceniających"
+        many: "Oceniających"
+        other: "Oceniających"
       valuator_group:
         one: "Grupa weryfikująca"
         few: "Grupy Wyceniające"
@@ -107,10 +107,10 @@ pl:
         many: Ballot sheets
         other: Ballot sheets
       proposal:
-        one: "Propozycje obywatelskie"
-        few: "Propozycje obywatelskie"
-        many: "Propozycji obywatelskich"
-        other: "Propozycji obywatelskich"
+        one: "Pomysł"
+        few: "Pomysłów"
+        many: "Pomysłów"
+        other: "Pomysły"
       spending_proposal:
         one: "Projekt inwestycyjny"
         few: "Projekty inwestycyjne"
@@ -177,10 +177,10 @@ pl:
         many: "Tematy"
         other: "Tematy"
       poll:
-        one: "Głosowanie"
-        few: "Ankiety"
-        many: "Ankiety"
-        other: "Ankiety"
+        one: "Sondaż"
+        few: "Sondaży"
+        many: "Sondaży"
+        other: "Sondaże"
       proposal_notification:
         one: "Zgłoszenie propozycji"
         few: "Powiadomienie o wnioskach"
