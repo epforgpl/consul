@@ -858,7 +858,7 @@
       start_using_consul: Przejdź do strony głównej
       title: Twoje konto zostało poprawnie zweryfikowane
       user_permission_debates: ' '
-      user_permission_info: Teraz możesz:
+      user_permission_info: "Teraz możesz:"
       user_permission_proposal: Przeglądać i komentować pomysły innych
       user_permission_support_proposal: Dodawać swoje pomysły i dołączać do społeczności innych pomysłów
       user_permission_verify: "Aby wykonać wszystkie czynności, zweryfikuj swoje konto."
