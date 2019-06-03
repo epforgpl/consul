@@ -1,20 +1,20 @@
-pl:
+﻿pl:
   community:
     sidebar:
       title: Społeczność
       description:
-        proposal: Weź udział w społeczności użytkowników tej propozycji.
-        investment: Weź udział w społeczności użytkowników tej inwestycji.
-      button_to_access: Uzyskaj dostęp do społeczności
+        proposal: Dołącz do społeczności tego pomysłu.
+        investment: Dołącz do społeczności tego pomysłu.
+      button_to_access: Wejdź
     show:
       title:
-        proposal: Społeczność propozycji
+        proposal: Społeczność pomysłu
         investment: Społeczność inwestycji budżetowych
       description:
-        proposal: Weź udział w społeczności tej propozycji. Aktywna społeczność może pomóc w poprawie treści propozycji oraz zwiększyć jej rozpowszechnienie, zapewniając większe poparcie.
-        investment: Weź udział we wspólnocie tej inwestycji budżetowej. Aktywna społeczność może pomóc w ulepszeniu zakresu inwestycji budżetowych i zwiększyć ich rozpowszechnianie w celu uzyskania większego wsparcia.
+        proposal: Witamy w „społeczności pomysłu” - tu spotykają się wszystkie osoby, które chcą rozwijać dany pomysł. Możemy rozmawiać w obrębie tematów, przy czym każda osoba może dodać nowy temat. W zależności od tego, jak skonfigurujesz swoje konto, będą do Ciebie wysyłane powiadomienia o toczących się rozmowach. Do każdej osoby zabierającej głos możesz też wysłać wiadomość prywatną, niewidoczną dla reszty społeczności. 
+        investment: Weź udział w społeczności tej inwestycji budżetowej. Aktywna społeczność może pomóc w ulepszeniu zakresu inwestycji budżetowych i zwiększyć ich rozpowszechnianie w celu uzyskania większego wsparcia.
       create_first_community_topic:
-        first_theme_not_logged_in: Brak dostępnych spraw, uczestnicz tworząc pierwszą.
+        first_theme_not_logged_in: Brak dostępnych spraw, stwórz pierwszą.
         first_theme: Utwórz pierwszy temat społeczności
         sub_first_theme: "Aby utworzyć motyw, musisz %{sign_in} lub %{sign_up}."
         sign_in: "zaloguj się"
@@ -59,4 +59,4 @@ pl:
         recommendation_three: Ciesz się tą przestrzenią oraz głosami, które ją wypełniają, jest także twoja.
   topics:
     show:
-      login_to_comment: Muszą być %{signin} lub %{signup} by zostawić komentarz.
+      login_to_comment: '%{signin} lub %{signup} by zostawić komentarz.'
