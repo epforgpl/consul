@@ -12,10 +12,10 @@
                         alt: proposal.image.title.unicode_normalize %>
         </div>
 
-        <div class="small-12 medium-6 large-7 column">
+        <div class="small-12 medium-9 large-7 column">
     <% else %>
       <div class="row">
-        <div class="small-12 medium-9 column">
+        <div class="small-12 medium-12 column">
       <% end %>
         <div class="proposal-content">
           <% cache [locale_and_user_status(proposal), 'index', proposal, proposal.author] do %>
@@ -60,25 +60,6 @@
             <%= render "shared/tags", taggable: proposal, limit: 5 %>
           <% end %>
         </div>
-      </div>
-
-      <div id="<%= dom_id(proposal) %>_votes"
-           class="small-12 medium-3 column supports-container">
-        <% if proposal.successful? %>
-          <div class="padding text-center">
-            <p>
-              <%= t("proposals.proposal.successful") %>
-            </p>
-          </div>
-        <% elsif proposal.archived? %>
-          <div class="padding text-center">
-            <strong><%= t("proposals.proposal.supports", count: proposal.total_votes) %></strong>
-            <p><%= t("proposals.proposal.archived") %></p>
-          </div>
-        <% else %>
-          <%= render 'votes',
-                    { proposal: proposal, vote_url: vote_proposal_path(proposal, value: 'yes') } %>
-        <% end %>
       </div>
     </div>
   </div>
