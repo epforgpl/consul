@@ -1,19 +1,19 @@
-pl:
+﻿pl:
   images:
     remove_image: Usuń obraz
     form:
-      title: Obraz opisujący
+      title: Obraz dotyczący pomysłu
       title_placeholder: Dodaj opisowy tytuł obrazu
       attachment_label: Wybierz obraz
       delete_button: Usuń obraz
-      note: "Możesz przesłać jeden obraz następujących typów treści: %{accepted_content_types}, do %{max_file_size} MB."
+      note: "Możesz przesłać jeden obraz następującego typu: %{accepted_content_types}, do %{max_file_size} MB."
       add_new_image: Dodaj obraz
       admin_title: "Obraz"
       admin_alt_text: "Alternatywny tekst dla obrazu"
     actions:
       destroy:
         notice: Obraz został pomyślnie usunięty.
-        alert: Nie można zniszczyć obrazu.
+        alert: Nie można usunąć obrazu.
         confirm: Czy na pewno chcesz usunąć obraz? Tego działania nie można cofnąć!
     errors:
       messages:
