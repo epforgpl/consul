@@ -601,7 +601,7 @@
         create:
           notice_html: "Obserwujesz teraz ten pomysł! </br> Powiadomimy Cię o zmianach, abyś był/a na bieżąco."
         destroy:
-          notice_html: "Przestałeś obserwować ten projekt inwestycyjny! </br> Nie będziesz już otrzymywać powiadomień związanych z tym projektem."
+          notice_html: "Przestałeś obserwować ten pomysł! </br> Nie będziesz już otrzymywać powiadomień związanych z tym pomysłem."
     hide: Ukryj
     print:
       print_button: Wydrukuj tę informację
