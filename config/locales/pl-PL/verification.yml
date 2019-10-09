@@ -1,4 +1,4 @@
-﻿pl:
+pl:
   verification:
     alert:
       lock: Osiągnąłeś maksymalną liczbę prób. Proszę spróbować ponownie później.
@@ -31,7 +31,7 @@
         office: Sprawdź w dowolnym %{office}
         send_letter: Wyślij do mnie list z kodem
         title: Gratulacje!
-        user_permission_info: Teraz możesz:
+        user_permission_info: "Teraz możesz:"
       update:
         flash:
           success: Kod poprawny. Twoje konto zostało zweryfikowane
