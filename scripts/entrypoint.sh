@@ -13,5 +13,10 @@ usermod -g "$USER_GID" consul 2> /dev/null
 chown -R -h "$USER_UID" "$BUNDLE_PATH"
 chgrp -R -h "$USER_GID" "$BUNDLE_PATH"
 
+chown -R -h "$USER_UID" /var/www/consul/log
+chgrp -R -h "$USER_GID" /var/www/consul/log
+
+#/var/www/consul/bin/rake db:migrate
+
 /usr/bin/sudo -EH -u consul "$@"
 

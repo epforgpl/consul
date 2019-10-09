@@ -42,7 +42,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  config.force_ssl = false
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -77,6 +77,19 @@ Rails.application.configure do
   #   password:             '<password>',
   #   authentication:       'plain',
   #   enable_starttls_auto: true }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+      :address              => 'smtp.mailgun.org',
+      :port                 => 587,
+      :domain               => 'consul.kodujdlapolski.pl',
+      :user_name            => 'postmaster@consul.kodujdlapolski.pl',
+
+      :authentication => :plain,
+      :enable_starttls_auto => true,
+      :ssl => false
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
